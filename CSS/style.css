@@ -1,0 +1,377 @@
+/* glopal rules*/
+
+:root{
+    --bg-color: #0078ff;
+}
+
+
+.section-header {
+  margin-bottom: 6rem;
+}
+
+.section-header P::after {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 5px;
+  bottom: -20px;
+  left: 50%;
+  background-color: var(--bg-color);
+  transform: translatex(-50%);
+}
+
+/* start nav */
+
+.custom-nav {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.custom-li {
+  padding: 0 10px;
+}
+
+.custom-li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  background-color: #fff;
+  height: 2px;
+  bottom: 0;
+  left: 1rem;
+  transition: 0.5s;
+}
+
+.custom-dd {
+  position: relative;
+}
+
+.custom-dd a::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  background-color: #fff;
+  height: 2px;
+  bottom: 0;
+  left: 0.6rem;
+  transition: 0.5s;
+}
+
+.custom-li:hover a::after,
+.custom-dd:hover a::before {
+  width: 50%;
+}
+
+body:has(#home:target) .home-li a::after {
+  width: 50%;
+}
+
+body:has(#about:target) .about a::after {
+  width: 50%;
+}
+
+body:has(#services:target) .servisec a::after {
+  width: 50%;
+}
+
+body:has(#portfolio:target) .portfolio a::after {
+  width: 50%;
+}
+
+body:has(#blog:target) .blog a::after {
+  width: 50%;
+}
+
+body:has(#contact:target) .contact a::after {
+  width: 50%;
+}
+
+.custom-deep::after {
+  content: "";
+  right: 4px;
+  border: 5px solid;
+  border-color: transparent transparent transparent black;
+  height: 5px;
+  position: absolute;
+  top: 11px;
+}
+
+.custom-deep:hover + .dropdown-submenu {
+  display: block;
+  right: -100%;
+  bottom: 0;
+}
+
+/* end nav */
+
+/* start header */
+
+.home {
+  background-image: url(../imges/hero-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+}
+
+
+.home .custom-h1 {
+  font-size: 5rem;
+}
+
+#home p {
+  margin: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing;
+  animation-duration: 2s;
+  /* animation-timing-function: steps(30, end); */
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  position: relative;
+  
+}
+
+#home span {
+  height: 25%;
+  background-color: white;
+  width: 5px;
+  position: absolute;
+  bottom: 0%;
+  right: 35%;
+  animation: moving;
+  animation-duration: 2s;
+  /* animation-timing-function: steps(30, end); */
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes typing {
+  0% { width: 0 ;  }
+  50% { width: 35% ; }
+
+
+}
+@keyframes moving {
+  0%{right: 47%;}
+  50%{right: 35%;}
+  100%{right: 47%;}
+
+}
+
+.lair {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.data-ul {
+  line-height: 2.5;
+}
+.data-ul li strong {
+  font-weight: 600;
+}
+
+/* end header */
+/* start about */
+
+#about .custom-ul li {
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.about-h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 6rem;
+  height: 3px;
+  background-color: var(--bg-color);
+}
+
+#about .custom-p {
+  font-size: 1.31rem;
+}
+
+/* end about */
+/* start services */
+
+.custom-icon {
+  border: 0.75rem solid var(--bg-color);
+  padding: 2rem;
+  transition: 0.5s;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-card:hover .custom-icon {
+  color: white;
+  background-color: var(--bg-color);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* end services */
+/* start counter */
+
+.counter {
+  background-image: url(../imges/counters-bg.jpg);
+  background-position: center center;
+  background-size: center;
+  background-attachment: fixed;
+}
+
+.card-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  border: 10px solid;
+  border-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 30px;
+}
+
+/* end counter */
+
+/* start portfolio */
+.custom-ol{
+    font-size: 0.75rem;
+}
+
+.work  {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#portfolio .custom-hover img{
+    transition: 1s;
+}
+
+#portfolio .custom-hover:hover img{
+    scale: 1.25;
+}
+/* end portfolio */
+
+/* satrt testmonial */
+
+#testmonial{
+    background-image: url(../imges/overlay-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.custom-padding{
+    padding-top: 80px;
+}
+
+.custom-top{
+    top: -50px;
+}
+
+#testmonial .custom-ind{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+
+
+/* end testmonial */
+
+/* start blog */
+
+#blog .custom-a-hover{
+  transition: 1s;
+}
+
+#blog .custom-a-hover:hover{
+  color: #0078ff !important;
+}
+
+#blog .custom-text{
+  font-size: 0.75rem;
+}
+
+/* end blog */
+
+/* start contact */
+#contact{
+  background-image: url(../imges/overlay-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+#contact .blue-layer{
+box-shadow: black 0px 1px 3px -2px ;
+position: relative;
+z-index: 1;
+}
+#contact form textarea{
+  max-height: 300px;
+  min-height: 100px;
+}
+
+.custom-hover-icon{
+  cursor: pointer;
+}
+.custom-hover-icon:hover{
+  background-color: #0078ff;
+  color: white;
+  border-color: rgba(255, 255, 255, 0.8);
+}
+/* end contact */
+
+footer{
+  background-color: #0062d3;
+}
+
+
+
+
+/* media query */
+
+@media only screen and (max-width: 1200px) {
+  .data-ul {
+    line-height: 2;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .custom-li {
+    padding: 0;
+  }
+
+  .custom-li a::after {
+    left: 0;
+  }
+
+  .custom-dd a::before {
+    left: 0;
+  }
+
+  .custom-li:hover a::after,
+  .custom-dd:hover a::before {
+    width: 10%;
+  }
+
+  #testmonial .custom-move{
+    transform: translateY(20%);
+  }
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .data-ul {
+    line-height: 2.5;
+  }
+}
+
+@media screen and (max-width:600px) {
+
+ 
+}
